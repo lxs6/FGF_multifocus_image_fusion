@@ -21,8 +21,9 @@ else               %for color images
       F(:,:,i) = main_fusion(A(:,:,i), B(:,:,i));       
     end
 end
+toc
 
 figure, imshow(uint8(F)); title('fused result')
 imwrite(uint8(F),'fused results\result.tif');    
-toc
+
 
